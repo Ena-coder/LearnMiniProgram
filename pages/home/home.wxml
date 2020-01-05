@@ -1,0 +1,28 @@
+<!--pages/home/home.wxml-->
+<text>pages/home/home.wxml</text>
+<button open-type="getUserInfo" bindgetuserinfo="handleBtnClick">获取权限</button>
+<open-data type="userNickName"></open-data>
+<text wx:for="{{list}}">{{item.title}}-</text>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
+<button>占位</button>
