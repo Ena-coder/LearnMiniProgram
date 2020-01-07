@@ -1,0 +1,11 @@
+
+var message = 'hello! 小程序'
+var age = 2020
+var add = function (n1, n2) {
+  return n1 + n2
+}
+module.exports = {
+  message: message,
+  age: age,
+  add: add,
+}

@@ -1,0 +1,6 @@
+<template name="contentItem">
+    <view style="display: flex;height:30px;line-height: 30px;">
+      <button size="mini">{{btnContent}}</button>
+      <text>{{content}}</text>
+    </view>
+  </template>

@@ -10,4 +10,39 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+  <!-- <view>年龄：{{age>18 ? '成年了' : '未成年'}}</view> -->
+  <!-- class='{{isActive ？"timeColor" : ""}}' -->
+  <!-- <view class="{{isActive ? 'timeColor' : ' '}}">时间：{{nowDate}}</view> -->
+  <!-- <button size="mini" bindtap="handleTimeClass">改变另一个组件的样式</button> -->
+  <!-- <view wx:if="{{score >= 90}}">成绩：优秀</view>
+  <view wx:elif="{{score >= 80}}">成绩：良好</view>
+  <view wx:elif="{{score >= 6s}}">成绩：及格</view>
+  <view wx:else>成绩：不及格</view> -->
+  <!-- <button size="mini" bindtap="handleScoreShow">是否展示成绩</button> -->
+  <!-- 相对定位 -->
+  <!-- <import src="../template"/> -->
+  <!-- 绝对定位 -->
+  <!-- <import src="/pages/template"/> -->
+  <!-- <template is="contentItem" data="{{btnContent:'模板按钮1',content:'模板文字1'}}"></template>
+  <template is="contentItem" data="{{btnContent:'模板按钮2',content:'模板文字2'}}"></template>
+  <template is="contentItem" data="{{btnContent:'模板按钮3',content:'模板文字3'}}"></template>
+  <template is="contentItem" data="{{btnContent:'模板按钮4',content:'模板文字4'}}"></template> -->
+  <view bindtap="numTofixed">{{num}}</view>
+  <!-- <wxs src="../format.wxs" module="format"></wxs>
+  <view>{{format.priceFormat(price)}}</view>
+  <text>{{format.dateFormat(timestamp)}}</text> -->
+  <!-- <view class="box" id="outer" bindtap="handleOuter">外面的view
+    <view class="innerbox" id="innner" bindtap="handleInner">里面的view</view>
+  </view> -->
+  <!-- <view class="tilte_box">
+    <block wx:for='{{titles}}' wx:key="{{index}}">
+      <view class="item" bindtap="handleItemClick" data-index="{{index}}" data-title="{{item}}">{{item}}</view>
+    </block>
+  </view> -->
+  <view class="red" capture-bind:tap="handleCapRed" bind:tap="handleRed" >
+    <view class="yellow" capture-bind:tap="handleCapYellow" bindtap="handleYellow">
+      <view class="blue" capture-bind:tap="handleCapBlue" catchtap="handleBlue">
+      </view>
+    </view>
+  </view>
 </view>

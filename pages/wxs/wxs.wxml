@@ -1,0 +1,9 @@
+<!--pages/wxs/wxs.wxml-->
+<text>pages/wxs/wxs.wxml</text>
+<!-- 只能使用相对路径 -->
+<wxs src="../a.wxs" module="a">
+</wxs>
+
+<view>{{a.message}}</view>
+<view>{{a.age}}</view>
+<view>{{a.add(10,10)}}</view>
