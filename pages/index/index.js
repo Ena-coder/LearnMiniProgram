@@ -1,13 +1,39 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
 Page({
+  handleBtnClick(){
+    // 1.获取组件对象
+    const my_sel = this.selectComponent('.my-sel')
+    // 2.通过setData修改组建中的数据（不合理）
+    // my_sel.setData({
+    //   count: my_sel.data.count + 1
+    // })
+    // 3.通过方法修改组件中的数据
+    my_sel.incrementCount(10)
+  },
+
+
+
+
+
+
+
+
+
+
+
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    count: 0
+  },
+  handleTitleItemClick(e) {
+    console.log(e.detail.title, e.detail.index)
+  },
+  handleIncrement(e){
+    console.log(e)
+    this.setData({
+      count: this.data.count + 1
+    })
   },
   //事件处理函数
   bindViewTap: function() {

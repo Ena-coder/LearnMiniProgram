@@ -1,0 +1,4 @@
+<!--components/my-slot/my-slot.wxml-->
+<view><slot name="top"/></view>
+<view><slot name="middle"/></view>
+<view><slot name="bottom"/></view>
