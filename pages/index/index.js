@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+import request from '../../service/network.js'
 Page({
   data: {
     motto: 'Hello World',
@@ -42,6 +42,15 @@ Page({
         }
       })
     }
+
+    request({
+      url: 'http://httpbin.org/post',
+      method:'POST'
+    }).then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -50,5 +59,27 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  get_requert_origin(){
+    // wx: wx.request({
+    //   url: 'http://httpbin.org/post',
+    //   data: {
+    //     name: 'lily',
+    //     age: 18
+    //   },
+    //   header: {},
+    //   method: 'POST',
+    //   dataType: 'json',
+    //   responseType: 'text',
+    //   success: function (res) {
+    //     console.log(res)
+    //   },
+    //   fail: function (res) {
+    //     console.log(res)
+    //   },
+    //   complete: function (res) {
+    //     console.log(res)
+    //   },
+    // })
   }
 })
