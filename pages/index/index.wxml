@@ -1,13 +1,36 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<!-- 1.navigator -->
+  <view>跳转页面覆盖当前页面：</view>
+  <view>{{name}} {{age}} {{height}}</view>
+  <!-- <navigator url="/pages/detail/detail?name=lily&age=15&height=1.33" >
+    <button size="mini">跳转到详情页</button>
+  </navigator> -->
+  <view>
+  <button size="mini" bindtap="btnClick">跳转到详情页(navigateTo)</button></view>
+
+
+
+
+
+
+
+
+<view>navigator属性：open-type的可选参数</view>
+  <view>关闭当前页面且不许返回：</view>
+  <!-- 2.navigator属性：open-type="redirect -->
+  <navigator open-type="redirect" url="/pages/detail/detail">open-type="redirect"</navigator>
+  <!-- 3.navigator属性：open-type="swichTab -->
+  <view>跳转到指定tabbar页面，并关闭其他所有非tabbar页面，同时与tabbar同步：</view>
+  <navigator open-type="switchTab" url="/pages/logs/logs">open-type="switchTab"</navigator>
+  <!-- 4.navigator属性：open-type="reLaunch -->
+  <view>关闭所有页面，打开应用中某个页面</view>
+  <navigator open-type="reLaunch" url="/pages/logs/logs">open-type="reLaunch"</navigator>
+  <!-- 5.navigator属性：open-type="reLaunch -->
+  <view>关闭所有页面，打开应用中某个页面</view>
+  <navigator open-type="reLaunch" url="/pages/logs/logs">open-type="reLaunch"</navigator>
+
+
+  <!-- <text class="test">测试原生分享功能</text>
+  <button open-type="share">分享open-type</button> -->
 </view>

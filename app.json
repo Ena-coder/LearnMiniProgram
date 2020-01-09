@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/detail/detail",
+    "pages/comment/comment"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,5 +12,17 @@
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      }
+    ]
+  }
 }
